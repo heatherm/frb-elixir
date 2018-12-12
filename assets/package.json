@@ -1,14 +1,33 @@
 {
+  "name": "family-recipe-box",
+  "description": "Recipe collaboration app",
+  "version": "1.0.0",
+  "author": "Heather Moore  <heather+github@telltail.nyc>",
+  "private": true,
   "repository": {},
   "license": "MIT",
   "scripts": {
     "deploy": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
-    "phoenix_html": "file:../deps/phoenix_html"
+    "phoenix_html": "file:../deps/phoenix_html",
+    "vue": "^2.5.17",
+    "graphql": "^14.0.2",
+    "vue-apollo": "^3.0.0-beta.26",
+    "apollo-client": "^2.4.7",
+    "apollo-cache-inmemory": "^1.3.11",
+    "apollo-link-http": "^1.5.7",
+    "graphql-tag": "^2.10.0"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -19,6 +38,14 @@
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "4.4.0",
-    "webpack-cli": "^2.0.10"
+    "webpack-cli": "^2.0.10",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.21",
+    "webpack-dev-server": "^3.1.10"
   }
 }
